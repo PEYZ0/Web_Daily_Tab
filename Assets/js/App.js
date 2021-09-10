@@ -20,7 +20,7 @@ var App_Setting_Search_Engine = 0;
 var App_Setting_Username = "Jason";
 
 
-var App_Setting_WeatherAPI_Key = "90c8fb1425627d1c0bc36d4828223042"; // 
+var App_Setting_WeatherAPI_Key = "Your_Open_Weather_API_Key"; // 
 var App_Weather_Long = 6.781840;
 var App_Weather_Lat = 49.305142;
 var App_WeatherAPI_URL;
