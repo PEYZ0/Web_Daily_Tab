@@ -1,0 +1,190 @@
+
+
+/*Made by Jason Jesse Huber (Copyright 2021)*/
+
+.container {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+.App_Window_Center {
+
+  justify-self: center;
+  align-self: center;
+  grid-area: 2 / 2 / 3 / 3;
+  transform: translateY(-18%);
+}
+
+.App_Window_UP_Left {
+
+  justify-self: start;
+  align-self: start;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.App_Window_UP_Right {
+
+  justify-self: end;
+  align-self: start;
+  grid-area: 1 / 3 / 2 / 4;
+  transform: translateX(-11%);
+}
+
+.App_Window_Down_Left {
+
+  justify-self: start;
+  align-self: end;
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.App_Window_Down_Right {
+
+  justify-self: end;
+  align-self: end;
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+.App_Window_Shortcut_Left {
+
+  justify-self: start;
+  grid-area: 1 / 1 / 4 / 2;
+  transform: translateX(23%);
+  background-color: rgba(22, 22, 22, 0.061);
+}
+
+.App_Window_Shortcut_Right {
+
+  justify-self: end;
+  grid-area: 1 / 3 / 4 / 4;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-image: url(./Assets/Others/Backgrounds/Background16.jpg);
+  background-size: cover;
+}
+  
+
+
+
+/*  Import local font face   */
+
+@font-face {
+  font-family: 'weathericons';
+  src: url('./Assets/font/weathericons-regular-webfont.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'WIcons';
+  src: url('./Assets/font/icomoon.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+.Default_Text{
+  overflow: hidden;
+  color: ivory;
+  text-align: end;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1em;
+
+}
+
+
+.App_Shortcut_Description{
+  overflow: hidden;
+  color: ivory;
+  font-size: 1em;
+  text-align: center;
+  margin-top: -35%;
+  font-family: 'Rubik', sans-serif;
+}
+
+  .App_Icon{
+    text-align: center;
+    overflow: hidden;
+    color: ivory;
+    font-family: WIcons;
+    font-size: 3em;
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.061);
+  }
+  
+  .App_Object_Clock{
+    overflow: hidden;
+    color: ivory;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 9em;
+  }
+
+  .App_Object_User{
+    overflow: hidden;
+    color: ivory;
+    text-align: center;
+    margin-top: -28%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3em;
+  }
+
+  .App_Object_Todo{
+    overflow: hidden;
+    color: ivory;
+    text-align: start;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.6em;
+    transform: translateX(-50%);
+  
+  }
+
+  .App_Object_Weather_Text{
+    overflow: hidden;
+    color: ivory;
+    text-align: start;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+  }
+
+  .App_Object_Weather_Icon{
+    overflow: hidden;
+    color: ivory;
+    text-align: center;
+    font-family: WIcons;
+    font-size: 1.6em;
+  }
+  
+  .App_Shortcut{
+transform: translateY(-2%);
+  }
+/*Debugger*/
+/*
+  .container * {
+    border: 1px solid red;
+    position: relative;
+  }
+
