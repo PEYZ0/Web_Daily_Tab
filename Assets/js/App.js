@@ -21,6 +21,8 @@ var App_Setting_Username = "Jason";
 
 
 var App_Setting_WeatherAPI_Key = "90c8fb1425627d1c0bc36d4828223042"; // 
+var App_Weather_Long = 6.781840;
+var App_Weather_Lat = 49.305142;
 var App_WeatherAPI_URL;
 
 
@@ -53,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 
 
-  
+  const watchID = navigator.geolocation.watchPosition(App_Update_Weather, error, options);
 
 
     App_Init();
@@ -171,6 +173,8 @@ function App_Update_Weather(){
   navigator.geolocation.getCurrentPosition(function(position){
 
     App_WeatherAPI_URL = "http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=" + App_Setting_WeatherAPI_Key;
+
+    console.log("hello");
     console.log(App_WeatherAPI_URL);
 
     App_Get_Weather_Data();
@@ -240,7 +244,7 @@ function App_Get_Weather_Icon(icon_ID = ""){
       
 
     default:
-      console.log("App_Console ==> Weather Icon Error! / Icon ID? ==>" + icon_ID);
+      console.log("App_Console ==> Weather Icon Error! / Icon ID? ");
       
       return "";
   }
@@ -292,40 +296,24 @@ function error() {
 
 
 
+
+
+
 function App_Init(){
 
-    const watchID = navigator.geolocation.watchPosition(App_Update_Weather, error, options);
-
-
+    console.log("App is Running");
     changeBackgroundImage();
+
 }
 
-  function changeBackgroundImage() {
+      function changeBackgroundImage() {
         var App_Background = "url('./Assets/Others/Backgrounds/Background" + getRandomInt(61) + ".jpg";
         console.log(App_Background);
         document.body.style.backgroundImage = App_Background;
         document.body.style.backgroundRepeat = "no-repeat";
         document.body.style.backgroundSize = "cover";
-}
+      }
 
-
-
-/*
-
-function App_Background (){
-
-    var App_F_Backdrop = "./Assets/Others/Backgrounds/Background" + getRandomInt(App_Setting_Backdrops) + ".jpg";
-
-    App_F_Backdrop_URL = App_F_Backdrop_URL.toString();
-
-    header.css('background-image', App_F_Backdrop);
-
-
-
-}
-
-
-*/
 
 
 
